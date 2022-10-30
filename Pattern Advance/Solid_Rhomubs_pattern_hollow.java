@@ -4,24 +4,33 @@ public class Solid_Rhomubs_pattern_hollow {
     public static void Solid_Rhomubs_pattern_print(int row, int column){
 
 
-        for (int i = 0; i < row; i++) {
+        for (int i = 1; i <= row; i++) {
             // this loop print the spaces
-            for (int j = 0; j < column-i; j++) {
+            for (int j = 1; j <= (column-i); j++) {
                 System.out.print('-');   
             }   
 
+            // System.out.println("row "+row+" column "+i );
+
+            if (i==1 || i==row) {
+                for (int j = 1; j <= column; j++) {
+                    System.out.print('*');   
+                }   
+    
+            } else {
+                for (int j = 1; j <= column; j++) {
+                    if (j==1 || j==row) {
+                            System.out.print('*');   
+                       } else {
+                        System.out.print(' ');   
+                       }  
+             }
+            }
+
+
             // Print *
 
-            for (int j = 0; j < column; j++) {
-                
-                for (int j2 = 0; j2 < column; j2++) {
-                    if (j==1 ||  j ==row) {
-                        System.out.print('*');  
-                    }
-                }
-            
-            }   
-
+       
 
             System.out.println("");
         }
